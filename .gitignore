@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+dist/
+npm-debug.log
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Build
+build/
+coverage/
