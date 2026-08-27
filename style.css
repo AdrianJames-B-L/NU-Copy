@@ -1,0 +1,272 @@
+/* ==========================================================================
+   1. RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Graphik', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    padding: 0px 120px;
+    background-color: rgba(244, 244, 244, 0.8);
+    backdrop-filter: blur(50px);
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo SVG */
+.logo-link {
+    display: flex;
+    align-items: center;
+    color: #820AD1;
+    text-decoration: none;
+}
+
+.logo-link svg {
+    width: 60px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. MENU DE NAVEGAÇÃO
+   ========================================================================== */
+.main-nav {
+    flex: 1;
+    padding-left: 45px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px; /* Espaçamento uniforme entre os links */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Ícones de seta no menu */
+.nav-link i {
+    font-size: 17px;
+    transition: 0.3s ease;
+    margin-left: 6px;
+}
+
+/* Efeito de rotação na seta ao passar o mouse */
+.nav-link:hover i {
+    transform: rotate(180deg);
+    color: #820AD1;
+}
+
+/* ==========================================================================
+   4. AÇÕES DO CABEÇALHO (BOTÕES E BUSCA)
+   ========================================================================== */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botão de Busca */
+.icon-button {
+    background: none;
+    border: none;
+    color: #820AD1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Botões Gerais de Ação */
+.btn {
+    padding: 7px 15px;
+    border-radius: 50px;
+    height: 50px;
+    width: 12em;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+}
+
+/* Quero ser Nubank (Roxo) */
+.btn-primary {
+    background-color: #820AD1;
+    color: #ffffff;
+}
+
+/* Login Empresas (Cinza translúcido) */
+.btn-secondary {
+    background-color: rgba(202, 202, 202, 0.3);
+    color: rgb(0, 0, 0);
+}
+
+/* ==========================================================================
+   5. SEÇÃO HERO (INÍCIO)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-radius: 0 0 50px 50px;
+}
+
+/* Camada escura sobre a foto */
+.hero-bg-overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.5));
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+/* Container dos textos e formulário */
+.hero-content {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 120px;
+    align-items: center;
+    z-index: 99;
+}
+
+/* Título Principal */
+.hero-title-box {
+    color: #fff;
+    width: 35em;
+}
+
+.hero-title-box h1 {
+    font-size: 44px; /* Aumentado para dar mais destaque comercial */
+    line-height: 1.2;
+}
+
+/* Botão de seta para baixo */
+.scroll-down-btn {
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.scroll-down-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   6. CARD DE CAPTURA (CPF)
+   ========================================================================== */
+.cpf-form-box {
+    background-color: white;
+    width: 380px;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cpf-form-box h2 {
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #111;
+    line-height: 1.3;
+}
+
+.cpf-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cpf-form input {
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    background-color: rgba(202, 202, 202, 0.3);
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+/* Efeito de foco quando o usuário clica para digitar o CPF */
+.cpf-form input:focus {
+    border: 2px solid #820AD1;
+}
+
+.cpf-form button {
+    padding: 18px;
+    border-radius: 25px;
+    border: none;
+    background-color: #820AD1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cpf-form button:hover {
+    background-color: #6d06b3;
+}
+
+/* ==========================================================================
+   7. SEÇÃO DE PRODUTOS
+   ========================================================================== */
+.products-section {
+    padding: 80px 120px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #111;
+}
